@@ -5,6 +5,7 @@ import AuthSessionProvider from "@/components/SessionProvider";
 import { HeroUIProviders } from "@/components/HeroUIprovider";
 import { Header } from "@/components/Header/header";
 import { Footer } from "@/components/Footer/footer";
+import {ToastProvider} from "@heroui/toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,9 +34,10 @@ export default function RootLayout({
       >
         <HeroUIProviders>
           <AuthSessionProvider>
-            <Header />
-            {children}
-            <Footer />
+              <Header />
+              <ToastProvider />
+              {children}
+              <Footer />
             </AuthSessionProvider>
         </HeroUIProviders>
       </body>
