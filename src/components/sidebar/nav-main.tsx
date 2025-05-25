@@ -30,7 +30,7 @@ export function NavMain({
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
               tooltip="Dashboard"
-              className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
+              className="min-w-8 bg-blue-600 text-primary-foreground duration-200 ease-linear hover:bg-blue-600/90 hover:text-primary-foreground active:bg-blue-600/90 active:text-primary-foreground"
             >
               <PlusCircleIcon />
               <span>Quick View</span>
