@@ -11,6 +11,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 export function NavMain({
   items,
@@ -47,7 +48,7 @@ export function NavMain({
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton tooltip={item.title} asChild>
-                <Link href={item.href}>
+                <Link href={`/dashboard${item.url}`}>
                 {item.icon && <item.icon />}
                 <span>{item.title}</span>
                 </Link>
