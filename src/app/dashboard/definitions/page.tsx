@@ -604,6 +604,8 @@ export default function LandscapingManagement() {
     return colors[serviceLine] || "default";
   };
 
+  // Show a beautiful thing if everything is blank.
+
   return (
     <div className="min-h-screen bg-white">
       <ToastContainer toasts={toasts} onRemove={removeToast} />
