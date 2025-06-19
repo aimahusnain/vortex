@@ -79,6 +79,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         url: "#",
         icon: BarChartIcon,
       },
+
       {
         title: "Projects",
         url: "#",
@@ -88,6 +89,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         title: "Team",
         url: "#",
         icon: UsersIcon,
+      },
+      {
+        title: "Estimator",
+        url: "/estimator",
+        icon: BarChartIcon,
       },
     ],
     navClouds: [
