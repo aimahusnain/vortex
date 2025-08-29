@@ -58,7 +58,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   
   const data = {
     user: {
-      name: session?.user?.name || "Guest",
+      name: session?.user?.name || "You Are Hacker!",
       email: session?.user?.email || "",
       avatar: session?.user?.image || null, // Set to null when no image
       initials: getInitials(session?.user?.name), // Add initials
@@ -75,10 +75,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         icon: ListIcon,
       },
       {
-        title: "Analytics",
+        title: "Pricebook & Labor Setup",
         url: "#",
         icon: BarChartIcon,
       },
+
       {
         title: "Projects",
         url: "#",
@@ -88,6 +89,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         title: "Team",
         url: "#",
         icon: UsersIcon,
+      },
+      {
+        title: "Estimator",
+        url: "/estimator",
+        icon: BarChartIcon,
       },
     ],
     navClouds: [

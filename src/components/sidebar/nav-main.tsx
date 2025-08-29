@@ -11,6 +11,8 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import Link from "next/link"
+import { cn } from "@/lib/utils"
+import { IoNotifications, IoNotificationsOutline } from "react-icons/io5"
 
 export function NavMain({
   items,
@@ -27,18 +29,18 @@ export function NavMain({
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton
-              tooltip="Quick Create"
-              className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
+              tooltip="Dashboard"
+              className="min-w-8 bg-blue-600 text-primary-foreground duration-200 ease-linear hover:bg-blue-600/90 hover:text-primary-foreground active:bg-blue-600/90 active:text-primary-foreground"
             >
               <PlusCircleIcon />
-              <span>Quick Create</span>
+              <span>Quick View</span>
             </SidebarMenuButton>
             <Button
               size="icon"
               className="h-9 w-9 shrink-0 group-data-[collapsible=icon]:opacity-0"
               variant="outline"
             >
-              <MailIcon />
+              <IoNotificationsOutline />
               <span className="sr-only">Inbox</span>
             </Button>
           </SidebarMenuItem>
@@ -47,7 +49,7 @@ export function NavMain({
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton tooltip={item.title} asChild>
-                <Link href={item.href}>
+                <Link href={`/dashboard${item.url}`}>
                 {item.icon && <item.icon />}
                 <span>{item.title}</span>
                 </Link>
