@@ -5,22 +5,13 @@ import React, { useState, useEffect } from 'react';
 
 const SleekDescription = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activePoint, setActivePoint] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setActivePoint((prev) => (prev + 1) % 4);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
-  const problemPoints = [
-    "Multiple disconnected programs",
-    "Broken workflows",
-    "Process inefficiencies", 
-    "Negative business impact"
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 relative overflow-hidden">

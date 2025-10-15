@@ -16,6 +16,7 @@ export async function GET(): Promise<NextResponse> {
     });
     return NextResponse.json(banks);
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: 'Failed to fetch banks' }, 
       { status: 500 }
@@ -37,6 +38,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     
     return NextResponse.json(bank);
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: 'Failed to create bank' }, 
       { status: 500 }

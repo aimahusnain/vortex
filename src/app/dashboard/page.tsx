@@ -6,7 +6,7 @@ export default function DashboardLayout() {
   return (
     <div>
       <TopBar />
-      <main className="p-6">I'm Dashbaord. </main>
+      <main className="p-6">I&apos;m Dashbaord.</main>
     </div>
   );
 }

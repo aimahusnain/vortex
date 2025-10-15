@@ -45,6 +45,7 @@ export default function SignupPage() {
       }
     } catch (err) {
       setError("Something went wrong");
+      console.log(err);
     } finally {
       setLoading(false);
     }
