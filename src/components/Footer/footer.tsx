@@ -60,7 +60,7 @@ export const Footer: FC = ({}) => {
             </section>
             <div className={`${s.copyright} border-t-1 border-slate-200 py-10`}>
               <p className="text-sm text-slate-500 ">
-                Copyright © {getFullYear} Vortex. <Link href="www.devkins.dev" target="_blank" className="underline">Devkins</Link>
+                Copyright © {getFullYear} Investors. <Link href="www.devkins.dev" target="_blank" className="underline">Devkins</Link>
               </p>
               <div className={s.social}>
                 <Tooltip content="Twitter" size="sm">

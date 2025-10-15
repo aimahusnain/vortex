@@ -85,7 +85,7 @@ export const Hero: FC = ({}) => {
                 size="md"
                 value="Get 14 days free"
                 styles=" shadow-md bg-black text-white font-medium rounded-full mr-5"
-                href="/signUp"
+                href="/signup"
               />
 
               <Button

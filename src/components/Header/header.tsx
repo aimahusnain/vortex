@@ -142,7 +142,7 @@ export const Header: FC = ({}) => {
                   <Button
                     as={Link}
                     className="bg-bluecustom text-white py-2 px-3 rounded-full text-sm font-medium hover:bg-white hover:text-bluecustom transition-all border-2 border-bluecustom shadow-md"
-                    href={"/signUp"}
+                    href={"/signup"}
                   >
                     Get started{" "}
                     <span className="hidden lg:inline-block">today</span>

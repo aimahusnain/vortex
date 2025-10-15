@@ -53,7 +53,7 @@ export const BannerGetStarted: FC = ({}) => {
             </p>
             <ButtonLink
               size="md"
-              href="/signUp"
+              href="/signup"
               styles="bg-white text-black rounded-full font-semibold"
               value="Get started today"
             />

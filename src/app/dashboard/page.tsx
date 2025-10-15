@@ -1,9 +1,12 @@
-import React from 'react'
+// app/dashboard/layout.tsx
 
-const Dashboard = () => {
+import TopBar from '@/components/Topbar';
+
+export default function DashboardLayout() {
   return (
-    <div>Dashboard</div>
-  )
+    <div>
+      <TopBar />
+      <main className="p-6">I'm Dashbaord. </main>
+    </div>
+  );
 }
-
-export default Dashboard

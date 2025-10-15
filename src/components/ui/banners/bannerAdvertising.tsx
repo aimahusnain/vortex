@@ -33,7 +33,7 @@ export const BannerAdvertising: FC = ({}) => {
           <section className="text-center grid grid-cols-2-auto justify-center items-center gap-2">
             <h5 className="text-white text-sm font-light">
               <span className="relative font-normal after:content-['.'] after:absolute after:bottom-0.5 mr-2 after:-right-1">
-                Vortex {getFullYear}{" "}
+                Investors {getFullYear}{" "}
               </span>
               Join us in Denver from June 7 - 9 to see what&apos;s coming next.
             </h5>

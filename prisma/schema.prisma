@@ -59,3 +59,25 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Banks {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  bankName      String
+  accountNumber String
+  routingNumber String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  fundsDatabase fundsDatabase[]
+}
+
+model fundsDatabase {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  bankId     String   @db.ObjectId
+  bankName   Banks    @relation(fields: [bankId], references: [id])
+  fundName   String
+  fundType   String
+  fundAmount Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
