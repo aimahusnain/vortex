@@ -1,44 +1,47 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import AuthSessionProvider from "@/components/SessionProvider";
-import { HeroUIProviders } from "@/components/HeroUIprovider";
-import { Header } from "@/components/Header/header";
-import { Footer } from "@/components/Footer/footer";
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import './globals.css'
+import Sidebar from '@/components/sidebar';
+import { LanguageProvider } from '@/hooks/use-language';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const _geist = Geist({ subsets: ["latin"] });
+const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Investors",
-  description: "Mutial Funds Management App",
-};
+  title: 'v0 App',
+  description: 'Created with v0',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <HeroUIProviders>
-          <AuthSessionProvider>
-            <Header />
-            {children}
-            <Footer />
-            </AuthSessionProvider>
-        </HeroUIProviders>
+      <body className={`font-sans antialiased`}>
+        <LanguageProvider>
+        {children}
+        </LanguageProvider>
       </body>
     </html>
-  );
+  )
 }
